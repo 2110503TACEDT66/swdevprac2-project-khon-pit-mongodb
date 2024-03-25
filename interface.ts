@@ -14,6 +14,7 @@ interface DentistItem {
     data: DentistItem[]
   }
 interface BookingItem{
+  id:string,
   user: UserItem,
   dentist: DentistItem,
   bookingDate:Date,

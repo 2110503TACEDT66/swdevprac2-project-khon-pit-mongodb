@@ -1,5 +1,5 @@
 import Image from "next/image"
-import getHospital from "@/libs/getHospital"
+import getHospital from "@/libs/getDentist"
 export default async function HospitalDetailPage({params}:{params:{hid:string}}) {
     const hospitalDetail = await getHospital(params.hid);
     // //Mock Data
