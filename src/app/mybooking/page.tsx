@@ -1,11 +1,9 @@
-'use client'
-
-import BookingList from "@/components/BookingList"
+import BookingList from '@/components/BookingList';
 
 export default function MyBooking() {
-    return (
-      <main>
-        <BookingList/>
-      </main>
-    )
-  }
+  return (
+    <main>
+      <BookingList />
+    </main>
+  );
+}
