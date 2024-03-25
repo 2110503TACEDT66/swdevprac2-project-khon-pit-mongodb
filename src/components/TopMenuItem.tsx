@@ -9,7 +9,6 @@ export default function TopMenuItem({
 }) {
   return (
     <Link
-      className="w-[120px] text-center my-auto font-sans text-[10pt] text-gray-500"
       href={pageRef}>
       {title}
     </Link>

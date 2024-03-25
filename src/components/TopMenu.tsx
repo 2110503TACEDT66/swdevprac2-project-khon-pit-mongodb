@@ -18,9 +18,6 @@ export default async function TopMenu() {
       />
       <TopMenuItem title="Booking" pageRef="/booking" />
       <div className="absolute right-0 flex flex-column h-full">
-        <div className="flex">
-          <TopMenuItem title="My Booking" pageRef="/mybooking" />
-        </div>
         {session ? (
           <Link href="/api/auth/signout">
             <div
