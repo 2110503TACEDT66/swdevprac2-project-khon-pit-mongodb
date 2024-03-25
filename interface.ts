@@ -4,7 +4,7 @@ interface DentistItem {
     picture:string,
     experience: string;
     expertise: string;
-    bookDate: Date[];
+    bookings: BookingItem[];
   }
   
   interface DentistJson {

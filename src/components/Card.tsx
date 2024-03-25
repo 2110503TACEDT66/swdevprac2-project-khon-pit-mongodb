@@ -19,8 +19,9 @@ export default function Card({
           fill={true}
           className="object-cover round-t-lg"
         />
-        {dentistName};
+        
       </div>
+      <div className='w-full h-[30%] relative'>{dentistName}</div>
     </InteractiveCard>
   );
 }
