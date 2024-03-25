@@ -5,21 +5,12 @@ import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 
 export default function Banner() {
-  const [index, setIndex] = useState(0);
-  const path = [
-    '/img/cover.jpg',
-    '/img/cover2.jpg',
-    '/img/cover3.jpg',
-    '/img/cover4.jpg',
-  ];
   const router = useRouter();
   const { data: session } = useSession();
   return (
-    <div
-      className="block p-[5px] m-0 w-screen h-[80vh] relative"
-      onClick={() => setIndex(index + 1)}>
+    <div className="block p-[5px] m-0 w-screen h-[80vh] relative">
       <Image
-        src={path[index % 4]}
+        src="/img/cover.jpg"
         alt="cover"
         fill={true}
         className="object-cover"

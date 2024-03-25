@@ -17,11 +17,14 @@ export default async function TopMenu() {
         sizes="100vh"
       />
       <TopMenuItem title="Booking" pageRef="/booking" />
-      <div className="absolute left-0 flex flex-column h-full">
+      <div className="absolute right-0 flex flex-column h-full">
+        <div className="flex">
+          <TopMenuItem title="My Booking" pageRef="/mybooking" />
+        </div>
         {session ? (
           <Link href="/api/auth/signout">
             <div
-              className="flex items-center 
+              className="flex items-center h-full
                 px-2 text-cyan-600 text-sm">
               Sign-Out of {session.user?.name}
             </div>
@@ -29,15 +32,12 @@ export default async function TopMenu() {
         ) : (
           <Link href="/api/auth/signin">
             <div
-              className="flex items-center    
+              className="flex items-center h-full   
                 px-2 text-cyan-600 text-sm">
               Sign-In
             </div>
           </Link>
         )}
-        <div className="flex">
-          <TopMenuItem title="My Booking" pageRef="/mybooking" />
-        </div>
       </div>
     </div>
   );
