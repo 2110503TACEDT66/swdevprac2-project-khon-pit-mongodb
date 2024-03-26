@@ -18,7 +18,6 @@ export default async function createBooking(
         user: user,
         bookingDate: bookingDate,
         symptom: symptom,
-        createAt: new Date(),
       }),
     }
   );
