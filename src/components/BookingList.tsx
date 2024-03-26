@@ -13,7 +13,7 @@ export default async function BookingList() {
   async function deleteBooking(id: string) {
     'use server';
     const response = await fetch(
-      `https://presentation-day-1-khon-pit-mongodb-liard.vercel.app/api/v1/bookings/${id}`,
+      `${process.env.BACKEND_URL}/api/v1/bookings/${id}`,
       {
         method: 'DELETE',
         headers: {
@@ -31,7 +31,7 @@ export default async function BookingList() {
   async function updateBooking(id: string, symptom: string) {
     'use server';
     const response = await fetch(
-      `https://presentation-day-1-khon-pit-mongodb-liard.vercel.app/api/v1/bookings/${id}`,
+      `${process.env.BACKEND_URL}/api/v1/bookings/${id}`,
       {
         method: 'PUT',
         headers: {
