@@ -40,9 +40,8 @@ export default async function registerPage(){
                         <input type='text' name="tel" placeholder="Tel" className="rounded-2xl m-3 p-2 " /><br/>
                         <input type="email" name="email" placeholder="Email" className="rounded-2xl m-3 p-2 "/><br/>
                         <input type="password" name="password" placeholder="Password" className="rounded-2xl m-3 p-2 " /><br/>
-                        <input type='text' name="role" placeholder="Role" className="rounded-2xl m-3 p-2 "/><br/>
+                        <button type="submit" className="bg-blue-500 text-white p-2 m-3 rounded-lg ">Create new account</button>
                     </form>
-                    <button type="submit" className="bg-blue-500 text-white p-2 m-3 rounded-lg ">Create new account</button>
                 </div>
             </div>
         </div>
