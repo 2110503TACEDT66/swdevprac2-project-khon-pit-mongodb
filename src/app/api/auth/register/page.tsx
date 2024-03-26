@@ -10,7 +10,6 @@ export default async function registerPage(){
         const tel = registerUserForm.get("tel")
         const email = registerUserForm.get("email")
         const password = registerUserForm.get("password")
-        const role = registerUserForm.get("role")
 
         try {
             await dbConnect()
@@ -19,7 +18,6 @@ export default async function registerPage(){
                 "tel" : tel ,
                 "email" : email ,
                 "password" : password ,
-                "role" : role 
             })
         }catch(error){
             console.log(error)
