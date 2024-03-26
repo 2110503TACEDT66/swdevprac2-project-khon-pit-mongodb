@@ -17,12 +17,12 @@ export default async function TopMenu() {
         sizes="100vh"
       />
       <TopMenuItem
-        title="addBooking"
+        title="Add new booking"
         imgSrc={'/img/addBookIcon.png'}
         pageRef="/dentists"
       />
       <TopMenuItem
-        title="bookingIcon"
+        title="My Booking"
         imgSrc={'/img/bookingIcon.png'}
         pageRef="/mybookings"
       />
@@ -31,15 +31,15 @@ export default async function TopMenu() {
           <Link href="/api/auth/signout">
             <div
               className="flex items-center h-full
-                px-2 text-cyan-600 text-sm">
+                px-2 text-cyan-600 text-sm text-white">
               Sign-Out of {session.user?.name}
             </div>
           </Link>
         ) : (
           <Link href="/api/auth/signin">
             <div
-              className="flex items-center h-full   
-                px-2 text-cyan-600 text-sm">
+              className="flex items-center h-full
+              px-2 text-cyan-600 text-sm text-white">
               Sign-In
             </div>
           </Link>

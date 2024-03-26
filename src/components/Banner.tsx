@@ -19,11 +19,6 @@ export default function Banner() {
         <h1 className="text-4xl font-medium text-white">Welcome to Dentist Booking</h1>
         <h3 className="text-xl font-serif text-white">Get your easiest way to meet the dentist here !!</h3>
       </div>
-      {session ? (
-        <div className="z-30 absolute top-5 right-10 font-semibold text-cyan-800 text-xl">
-          Welcome {session.user?.name}
-        </div>
-      ) : null}
     </div>
   );
 }
