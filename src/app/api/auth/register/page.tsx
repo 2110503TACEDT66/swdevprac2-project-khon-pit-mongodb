@@ -19,10 +19,15 @@ export default async function registerPage() {
         email: email,
         password: password,
       });
-      redirect('/');
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleSubmit = async (registerUserForm: FormData) => {
+    'use server';
+    registerUser(registerUserForm);
+    redirect('/api/auth/signin');
   };
 
   return (
@@ -45,7 +50,7 @@ export default async function registerPage() {
           <h1 className="text-center text-3xl font-serif text-white m-5 font-bold">
             Registration
           </h1>
-          <form action={registerUser}>
+          <form action={handleSubmit}>
             <input
               type="text"
               name="username"
@@ -71,7 +76,8 @@ export default async function registerPage() {
               type="password"
               name="password"
               placeholder="Password"
-              className="rounded-2xl m-3 p-3 "
+              className="rounded-2xl m-3 p-3"
+              minLength={6}
             />
             <br />
             <button
