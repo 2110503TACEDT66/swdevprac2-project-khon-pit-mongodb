@@ -26,7 +26,8 @@ export default async function registerPage() {
 
   const handleSubmit = async (registerUserForm: FormData) => {
     'use server';
-    registerUser(registerUserForm);
+
+    await registerUser(registerUserForm);
     redirect('/api/auth/signin');
   };
 
