@@ -33,14 +33,15 @@ export default async function registerPage(){
                 className="object-cover"
                 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
             />
-            <div className="flex justify-center items-center h-screen">
-                <div className="absolute">
+            <div className="flex justify-center items-center h-screen ">
+                <div className="absolute border border-4 rounded-xl p-10 backdrop-blur-xl">
+                    <h1 className="text-center text-3xl font-serif text-white m-5 font-bold">Registration</h1>
                     <form action={registerUser} >
-                        <input type="text" name="username" placeholder="Username" className="rounded-2xl m-3 p-2 "/><br/>
-                        <input type='text' name="tel" placeholder="Tel" className="rounded-2xl m-3 p-2 " /><br/>
-                        <input type="email" name="email" placeholder="Email" className="rounded-2xl m-3 p-2 "/><br/>
-                        <input type="password" name="password" placeholder="Password" className="rounded-2xl m-3 p-2 " /><br/>
-                        <button type="submit" className="bg-blue-500 text-white p-2 m-3 rounded-lg ">Create new account</button>
+                        <input type="text" name="username" placeholder="Username" className="rounded-2xl m-3 p-3 "/><br/>
+                        <input type='text' name="tel" placeholder="Tel" className="rounded-2xl m-3 p-3 " /><br/>
+                        <input type="email" name="email" placeholder="Email" className="rounded-2xl m-3 p-3 "/><br/>
+                        <input type="password" name="password" placeholder="Password" className="rounded-2xl m-3 p-3 " /><br/>
+                        <button type="submit" className="bg-white hover:bg-fuchsia-900 hover:text-white text-black p-2 m-3 rounded-lg font-serif">Create</button>
                     </form>
                 </div>
             </div>
