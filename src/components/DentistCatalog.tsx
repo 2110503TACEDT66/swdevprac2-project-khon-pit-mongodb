@@ -14,7 +14,7 @@ export default function DentistCatalog({dentistsJson,date}:{dentistsJson:Dentist
                 date!=""?
                 dentistJsonReady.data.map((dentistItem:DentistItem)=>(
                     <div className="w-1/5 m-12">
-                    { dentistItem.bookings?.some((bookdate:BookingItem)=>{let dd =new Date(bookdate.bookingDate);console.log(date+"\n"+dd);return new Date(date)==dd;})?
+                    { dentistItem.bookings?.some((bookdate:BookingItem)=>{let dd = bookdate.bookingDate ;console.log(date+"\n"+dd);return new Date(date).toISOString()==dd.toISOString();})?
                     null
                     :
                     <Link href={`/dentists/${dentistItem.id}`} >

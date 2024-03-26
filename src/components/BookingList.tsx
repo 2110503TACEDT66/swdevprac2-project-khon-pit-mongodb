@@ -51,7 +51,9 @@ export default async function BookingList() {
   }
 
   return (
+
     <div>
+      
       {bookingItems.length > 0 ? (
         bookingItems.map((bookingItem: BookingItem) => (
           <Booking
