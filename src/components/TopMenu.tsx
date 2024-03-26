@@ -26,11 +26,6 @@ export default async function TopMenu() {
         imgSrc={'/img/bookingIcon.png'}
         pageRef="/mybookings"
       />
-      <TopMenuItem
-        title="userInfoIcon"
-        imgSrc={'/img/userInfoIcon.png'}
-        pageRef="/me"
-      />
       <div className="absolute right-0 flex flex-column h-full">
         {session ? (
           <Link href="/api/auth/signout">
