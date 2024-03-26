@@ -26,7 +26,7 @@ export default async function TopMenu() {
         imgSrc="/img/bookingIcon.png"
         pageRef="/mybookings"
       />
-      {session ? (
+      {!session ? (
         <TopMenuItem
           title="Sign up"
           imgSrc="/img/userInfoIcon.png"
