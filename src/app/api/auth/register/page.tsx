@@ -1,8 +1,5 @@
-import { authOptions } from "../api/auth/[...nextauth]/route"
-import { getServerSession } from "next-auth"
 import User from "@/db/models/User"
 import { dbConnect } from "@/db/dbConnect"
-import { redirect } from "next/dist/server/api-utils"
 import Image from "next/image"
 
 export default async function registerPage(){
