@@ -28,7 +28,7 @@ export default async function registerPage() {
     'use server';
 
     await registerUser(registerUserForm);
-    redirect('/api/auth/signin');
+    redirect('/');
   };
 
   return (
