@@ -19,9 +19,7 @@ export default async function DentistCatalog({dentistsJson,date}:{dentistsJson:D
                         <Card dentistName={dentistItem.name} imgSrc={dentistItem.picture}/>
                     </Link>
                     :
-                    <Link href={`/dentists/${dentistItem.id}`} >
-                        <Card dentistName={dentistItem.name} imgSrc={dentistItem.picture}/>
-                    </Link>}
+                    null}
                     </div>
                 ))
             }
