@@ -12,9 +12,9 @@ export default async function DentistDetailPage({params}:{params:{id:string}}) {
             <Image src={dentistDetail.data.picture}
             alt='Dentist Picture' width={0} height={0} sizes="100vw"
             className='rounded-lg w-[30%] bg-black'/>
-            <div className='mx-5 my-5 text-left'><div className="text-xl">{dentistDetail.data.name}</div>
-            <div className='text-md'>{dentistDetail.data.experience}</div>
-            <div className='text-md'>{dentistDetail.data.expertise}</div>
+            <div className='mx-5 my-5 text-left'><div className="text-xl">Name : {dentistDetail.data.name}</div>
+            <div className='text-md'>Years of Experience : {dentistDetail.data.experience}</div>
+            <div className='text-md'>Area of Expertise : {dentistDetail.data.expertise}</div>
             <SymptomField dentistDetail={dentistDetail}/>
             </div>
             
