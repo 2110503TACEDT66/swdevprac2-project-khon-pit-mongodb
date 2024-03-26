@@ -28,7 +28,7 @@ export default async function registerPage() {
     'use server';
 
     await registerUser(registerUserForm);
-    redirect('/api/auth/signin');
+    redirect('/');
   };
 
   return (
@@ -47,7 +47,7 @@ export default async function registerPage() {
         }}
       />
       <div className="flex justify-center items-center h-screen ">
-        <div className="absolute border border-4 rounded-xl p-10 backdrop-blur-xl">
+        <div className="absolute border border-4 rounded-xl p-10 backdrop-blur-xl ">
           <h1 className="text-center text-3xl font-serif text-white m-5 font-bold">
             Registration
           </h1>
@@ -56,34 +56,34 @@ export default async function registerPage() {
               type="text"
               name="username"
               placeholder="Username"
-              className="rounded-2xl m-3 p-3 "
+              className="rounded-2xl m-3 p-3 w-[400px] "
             />
             <br />
             <input
               type="text"
               name="tel"
               placeholder="Tel"
-              className="rounded-2xl m-3 p-3 "
+              className="rounded-2xl m-3 p-3 w-[400px]"
             />
             <br />
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="rounded-2xl m-3 p-3 "
+              className="rounded-2xl m-3 p-3 w-[400px]"
             />
             <br />
             <input
               type="password"
               name="password"
               placeholder="Password"
-              className="rounded-2xl m-3 p-3"
+              className="rounded-2xl m-3 p-3 w-[400px]"
               minLength={6}
             />
             <br />
             <button
               type="submit"
-              className="bg-white hover:bg-fuchsia-900 hover:text-white text-black p-2 m-3 rounded-lg font-serif">
+              className="bg-white hover:bg-fuchsia-900 hover:text-white text-black p-2 m-3 rounded-lg font-serif font-bold ">
               Create
             </button>
           </form>
