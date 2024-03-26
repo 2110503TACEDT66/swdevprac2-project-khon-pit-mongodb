@@ -18,14 +18,21 @@ export default async function TopMenu() {
       />
       <TopMenuItem
         title="Add new booking"
-        imgSrc={'/img/addBookIcon.png'}
+        imgSrc="/img/addBookIcon.png"
         pageRef="/dentists"
       />
       <TopMenuItem
         title="My Booking"
-        imgSrc={'/img/bookingIcon.png'}
+        imgSrc="/img/bookingIcon.png"
         pageRef="/mybookings"
       />
+      {session ? (
+        <TopMenuItem
+          title="Sign up"
+          imgSrc="/img/userInfoIcon.png"
+          pageRef="/api/auth/register"
+        />
+      ) : null}
       <div className="absolute right-0 flex flex-column h-full">
         {session ? (
           <Link href="/api/auth/signout">
