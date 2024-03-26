@@ -1,17 +1,13 @@
-import getHospitals from '@/libs/getHospitals'
-import HospitalCatalog from '@/components/HospitalCatalog'
-import { Suspense } from 'react';
-import { LinearProgress } from '@mui/material';
+import getDentists from '@/libs/getDentists'
 
-export default function Hospital() {
-  const hospitals = getHospitals();
+import BookingPagSon from '@/components/BookingPageSon';
+
+export default async function Dentist() {
+  
+  const dentists = await getDentists();
   return (
     <main className='text-center p-5'>
-      <h1 className='text-xl font-medium'>Hospital Catalog</h1>
-      <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
-        <HospitalCatalog hospitalsJson={hospitals}/>
-      </Suspense>
-      
+        <BookingPagSon dentistJson={dentists}/>
     </main>
   )
 }

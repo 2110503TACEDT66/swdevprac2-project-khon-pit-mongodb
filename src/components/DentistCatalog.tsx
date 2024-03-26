@@ -1,17 +1,28 @@
 import Link from "next/link";
 import Card from "./Card";
+import dayjs, { Dayjs } from "dayjs";
 
-export default async function DentistCatalog({dentistsJson}:{dentistsJson:Promise<DentistJson>}){
-    const dentistJsonReady = await dentistsJson;
+
+export default async function DentistCatalog({dentistsJson,date}:{dentistsJson:DentistJson,date:string}){
+    const dentistJsonReady = dentistsJson;
     return(
         <div>
-        <div style={{ margin: "20px", display: "flex", flexDirection: "row", alignContent: "space-around",
-          justifyContent: "space-around", flexWrap: "wrap", padding:"10px"}}>
+        <div className= 'flex flex-row p-10 flex-wrap justify-center items-center'>
             {
                 dentistJsonReady.data.map((dentistItem:DentistItem)=>(
-                    <Link href={`/dentist/${dentistItem.id}`} className="w-1/5">
+                    <div className="w-1/5 m-12">
+                    {date!=null?
+                    dentistItem.bookings?.some((bookdate:BookingItem)=>{let dd =new Date(bookdate.bookingDate);console.log(date+"\n"+dd);return new Date(date)==dd;})?
+                    null
+                    :
+                    <Link href={`/dentists/${dentistItem.id}`} >
                         <Card dentistName={dentistItem.name} imgSrc={dentistItem.picture}/>
                     </Link>
+                    :
+                    <Link href={`/dentists/${dentistItem.id}`} >
+                        <Card dentistName={dentistItem.name} imgSrc={dentistItem.picture}/>
+                    </Link>}
+                    </div>
                 ))
             }
           </div>
