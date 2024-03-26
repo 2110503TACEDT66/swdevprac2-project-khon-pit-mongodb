@@ -16,7 +16,7 @@ export default function Booking({
   const [newSymptom, setNewSymptom] = useState<String | null>(null);
 
   return (
-    <div className="bg-slate-200 rounded px-5 py-2 my-2 flex flex-row h-1/5">
+    <div className="bg-slate-200 rounded px-5 py-2 my-2 flex flex-row h-1/5 text-black">
       <Image
         src={bookingItem.dentist.picture}
         alt="dentist"

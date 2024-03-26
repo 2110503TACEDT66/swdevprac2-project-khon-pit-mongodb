@@ -21,6 +21,6 @@ export default async function Dentist() {
       </main>
     );
   } else {
-    return <h1 className="text-center p-5">You have already booked</h1>;
+    return <h1 className="text-center p-5 text-4xl font-serif font-lg">You have already booked</h1>;
   }
 }

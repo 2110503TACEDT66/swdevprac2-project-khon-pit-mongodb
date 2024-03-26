@@ -6,6 +6,7 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from './api/auth/[...nextauth]/route'
 import NextAuthProvider from '@/providers/NextAuthProvider'
 import ReduxProvider from '@/redux/ReduxProvider'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,11 @@ export default async function RootLayout({
         <ReduxProvider>
           <NextAuthProvider session={nextAuthSession}>
             <TopMenu/>
+            <Image
+              src="/img/cover.jpg"
+              alt="cover"
+              fill={true}
+              className="object-cover absolute top-0 left-0 w-full h-full -z-10"/>
             {children}
           </NextAuthProvider>
         </ReduxProvider>

@@ -20,7 +20,7 @@ export default function Card({
         />
         
       </div>
-      <div className='w-full h-[30%] relative'>{dentistName}</div>
+      <div className='w-full h-[30%] relative text-black'>{dentistName}</div>
     </div>
   );
 }
