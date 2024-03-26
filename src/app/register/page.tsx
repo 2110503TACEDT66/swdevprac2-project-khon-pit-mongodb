@@ -2,6 +2,8 @@ import { authOptions } from "../api/auth/[...nextauth]/route"
 import { getServerSession } from "next-auth"
 import User from "@/db/models/User"
 import { dbConnect } from "@/db/dbConnect"
+import { redirect } from "next/dist/server/api-utils"
+import Image from "next/image"
 
 export default async function registerPage(){
 
@@ -28,13 +30,24 @@ export default async function registerPage(){
     }
 
     return (
-        <form action={registerUser}>
-            <input type="text" name="username"  placeholder="Username" /><br/>
-            <input type='text' name="tel"  placeholder="Tel" /><br/>
-            <input type="email" name="email"   placeholder="Email" /><br/>
-            <input type="password" name="password"  placeholder="Password" /><br/>
-            <input type='text' name="role"  placeholder="Role" /><br/>
-            <button type="submit" className="bg-blue-500 text-white p-2">Create new account</button>
-        </form>
+        <div>
+            <form action={registerUser} className="z-50">
+                <input type="text" name="username"  placeholder="Username" /><br/>
+                <input type='text' name="tel"  placeholder="Tel" /><br/>
+                <input type="email" name="email"   placeholder="Email" /><br/>
+                <input type="password" name="password"  placeholder="Password" /><br/>
+                <input type='text' name="role"  placeholder="Role" /><br/>
+                <button type="submit" className="bg-blue-500 text-white p-2">Create new account</button>
+            </form>
+            <div className="z-20">
+                <Image
+                    src="/img/cover.jpg"
+                    alt="cover"
+                    fill={true}
+                    className="object-cover"
+                /> 
+            </div>
+            
+        </div>
     )
 }
