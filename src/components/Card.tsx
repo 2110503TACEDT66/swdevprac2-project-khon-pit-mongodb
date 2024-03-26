@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import InteractiveCard from './InteractiveCard';
 import { Rating } from '@mui/material';
 
 export default function Card({
@@ -11,7 +10,7 @@ export default function Card({
 
 }) {
   return (
-    <InteractiveCard>
+    <div>
       <div className="w-full h-[70%] relative rounded-t-lg">
         <Image
           src={imgSrc}
@@ -22,6 +21,6 @@ export default function Card({
         
       </div>
       <div className='w-full h-[30%] relative'>{dentistName}</div>
-    </InteractiveCard>
+    </div>
   );
 }
