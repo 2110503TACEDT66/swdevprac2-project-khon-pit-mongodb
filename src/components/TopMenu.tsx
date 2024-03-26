@@ -16,9 +16,21 @@ export default async function TopMenu() {
         height={0}
         sizes="100vh"
       />
-      <TopMenuItem title="addBooking" imgSrc={'/img/addBookIcon.png'} pageRef="/booking" />
-      <TopMenuItem title="bookingIcon" imgSrc={'/img/bookingIcon.png'} pageRef="/booking" />
-      <TopMenuItem title="userInfoIcon" imgSrc={'/img/userInfoIcon.png'} pageRef="/booking" />
+      <TopMenuItem
+        title="addBooking"
+        imgSrc={'/img/addBookIcon.png'}
+        pageRef="/booking"
+      />
+      <TopMenuItem
+        title="bookingIcon"
+        imgSrc={'/img/bookingIcon.png'}
+        pageRef="/mybooking"
+      />
+      <TopMenuItem
+        title="userInfoIcon"
+        imgSrc={'/img/userInfoIcon.png'}
+        pageRef="/me"
+      />
       <div className="absolute right-0 flex flex-column h-full">
         {session ? (
           <Link href="/api/auth/signout">
