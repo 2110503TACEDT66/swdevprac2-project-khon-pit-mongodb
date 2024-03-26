@@ -28,23 +28,25 @@ export default async function registerPage(){
 
     return (
         <div>
-            <form action={registerUser} className="z-50">
-                <input type="text" name="username"  placeholder="Username" /><br/>
-                <input type='text' name="tel"  placeholder="Tel" /><br/>
-                <input type="email" name="email"   placeholder="Email" /><br/>
-                <input type="password" name="password"  placeholder="Password" /><br/>
-                <input type='text' name="role"  placeholder="Role" /><br/>
-                <button type="submit" className="bg-blue-500 text-white p-2">Create new account</button>
-            </form>
-            <div className="z-20">
-                <Image
-                    src="/img/cover.jpg"
-                    alt="cover"
-                    fill={true}
-                    className="object-cover"
-                /> 
+            <Image
+                src="/img/cover.jpg"
+                alt="cover"
+                fill={true}
+                className="object-cover"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            />
+            <div className="flex justify-center items-center h-screen">
+                <div className="absolute">
+                    <form action={registerUser} >
+                        <input type="text" name="username" placeholder="Username" className="rounded-2xl m-3 p-2 "/><br/>
+                        <input type='text' name="tel" placeholder="Tel" className="rounded-2xl m-3 p-2 " /><br/>
+                        <input type="email" name="email" placeholder="Email" className="rounded-2xl m-3 p-2 "/><br/>
+                        <input type="password" name="password" placeholder="Password" className="rounded-2xl m-3 p-2 " /><br/>
+                        <input type='text' name="role" placeholder="Role" className="rounded-2xl m-3 p-2 "/><br/>
+                    </form>
+                    <button type="submit" className="bg-blue-500 text-white p-2 m-3 rounded-lg ">Create new account</button>
+                </div>
             </div>
-            
         </div>
-    )
+    );
 }
