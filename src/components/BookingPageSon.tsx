@@ -12,7 +12,7 @@ import DateReserve from "@/components/DateReserve"
 
 
 export default function BookingPagSon({dentistJson}:{dentistJson:DentistJson}){
-    const bookingDate=useAppSelector((state)=>{return state.datePersistedReducer.dateSlice.bookdate.date})
+    const bookingDate=useAppSelector((state)=>{return state.dateSlice.bookdate.date})
     const dispatch = useDispatch<AppDispatch>()
     return(
         <div>

@@ -9,10 +9,8 @@ const persistConfig = {
     storage
 }
 
-const datePersistedReducer = persistReducer(persistConfig,combineReducers({dateSlice}))
-
 export const store = configureStore({
-    reducer:{datePersistedReducer}
+    reducer:{dateSlice}
 })
 
 export type RootState = ReturnType<typeof store.getState>

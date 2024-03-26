@@ -15,7 +15,7 @@ export default async function DentistDetailPage({params}:{params:{id:string}}) {
             <div className='mx-5 my-5 text-left'><div className="text-xl">Name : {dentistDetail.data.name}</div>
             <div className='text-md'>Years of Experience : {dentistDetail.data.experience}</div>
             <div className='text-md'>Area of Expertise : {dentistDetail.data.expertise}</div>
-            <SymptomField dentistDetail={dentistDetail}/>
+            <SymptomField dentist={params.id}/>
             </div>
             
         </div>

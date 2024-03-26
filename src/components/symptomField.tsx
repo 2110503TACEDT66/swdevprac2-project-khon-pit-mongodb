@@ -6,9 +6,9 @@ import { TextField } from "@mui/material";
 import createBooking from "@/libs/createBooking";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
-export default function SymptomField({dentistDetail}:{dentistDetail:DentistItem}){
-    const date=useAppSelector((state)=>{return state.datePersistedReducer.dateSlice.bookdate.date})
-    const symptom=useAppSelector((state)=>{return state.datePersistedReducer.dateSlice.bookdate.symptom})
+export default function SymptomField({dentist}:{dentist:string}){
+    const date=useAppSelector((state)=>{return state.dateSlice.bookdate.date})
+    const symptom=useAppSelector((state)=>{return state.dateSlice.bookdate.symptom})
     const dispatch = useDispatch<AppDispatch>()
     const {data:session,status}=useSession();
     if (!session || !session.user.token) return null;
@@ -19,7 +19,7 @@ export default function SymptomField({dentistDetail}:{dentistDetail:DentistItem}
             
         />
         <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2
-            shadow-sm text-white my-10" onClick={()=>{createBooking(session?.user._id,dentistDetail.id,new Date(date),symptom);redirect('/mybooking')}}>I want this dude.</button>
+            shadow-sm text-white my-10" onClick={()=>{createBooking(session.user.token,session?.user._id,dentist,new Date(date).toISOString(),symptom);}}>I want this dude.</button>
         </div>
     )
 }
