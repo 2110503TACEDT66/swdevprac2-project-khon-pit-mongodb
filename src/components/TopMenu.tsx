@@ -19,12 +19,12 @@ export default async function TopMenu() {
       <TopMenuItem
         title="addBooking"
         imgSrc={'/img/addBookIcon.png'}
-        pageRef="/booking"
+        pageRef="/dentists"
       />
       <TopMenuItem
         title="bookingIcon"
         imgSrc={'/img/bookingIcon.png'}
-        pageRef="/mybooking"
+        pageRef="/mybookings"
       />
       <TopMenuItem
         title="userInfoIcon"
