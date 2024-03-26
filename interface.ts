@@ -14,11 +14,13 @@ interface DentistItem {
     data: DentistItem[]
   }
 interface BookingItem{
-  id:string,
-  user: UserItem,
-  dentist: DentistItem,
+  _id:string,
+  user: Object,
+  dentist: Object,
   bookingDate:Date,
-  createAt:Date
+  symptom:string,
+  createAt:Date,
+  __v:number
 }
 interface UserItem {
   name: string;
