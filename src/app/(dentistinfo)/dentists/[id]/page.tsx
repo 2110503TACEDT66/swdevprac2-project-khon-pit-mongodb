@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import getDentist from '@/libs/getDentist';
-import { TextField } from '@mui/material';
 import SymptomField from '@/components/symptomField';
 import createBooking from '@/libs/createBooking';
 import { redirect } from 'next/navigation';

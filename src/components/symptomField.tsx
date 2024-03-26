@@ -38,13 +38,15 @@ export default function SymptomField({
         className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2
             shadow-sm text-white my-10"
         onClick={() => {
-          onCreateBooking(
-            session.user.token,
-            session?.user._id,
-            dentist,
-            new Date(date).toISOString(),
-            symptom
-          );
+          if (!symptom) alert('Please type in your symptom');
+          else
+            onCreateBooking(
+              session.user.token,
+              session?.user._id,
+              dentist,
+              new Date(date).toISOString(),
+              symptom
+            );
         }}>
         I want this dude.
       </button>
