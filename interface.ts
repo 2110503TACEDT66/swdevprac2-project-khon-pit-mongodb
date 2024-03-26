@@ -20,10 +20,10 @@ interface BookingItem{
   bookingDate:Date,
   createAt:Date
 }
-interface UserItem{
-  name: string,
-  tel: string,
-  email: string,
-  role: string,
-  password: string,
+interface UserItem {
+  name: string;
+  tel: string;
+  email: string;
+  role: string;
+  password: string;
 }
