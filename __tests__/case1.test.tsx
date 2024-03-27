@@ -4,8 +4,8 @@ import DentistCatalog from '@/components/DentistCatalog'
 import { screen, render, waitFor } from '@testing-library/react'
 import Card from '@/components/Card'
 
-describe('Denist test',()=>{
-    var dentistsJson:DentistJson
+describe('Dentist test',()=>{
+    let dentistsJson:DentistJson
     beforeEach(async () => {
         dentistsJson= await getDentists()
     })

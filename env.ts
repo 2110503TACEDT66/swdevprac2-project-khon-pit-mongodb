@@ -1,0 +1,5 @@
+process.env.NEXTAUTH_URL='http://localhost:3000'
+process.env.NEXTAUTH_SECRET='Ey7nTKnggBc0bRN8WUjyShw2qzOZ6KW4fUyqcKBePxY='
+process.env.FRONTEND_URL = 'http://localhost:3000'
+process.env.BACKEND_URL = 'https://presentation-day-1-khon-pit-mongodb.vercel.app'
+process.env.MONGO_URI = 'mongodb+srv://Konpid:Konpid@konpidmongodb.r4m7yyl.mongodb.net/?retryWrites=true&w=majority&appName=KonpidMongoDB'
