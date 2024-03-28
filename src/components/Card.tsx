@@ -10,7 +10,7 @@ export default function Card({
 
 }) {
   return (
-    <div className='w-full h-[300px] shadow-lg rounded-lg bg-white'>
+    <div className='w-full h-[300px] shadow-lg rounded-lg bg-white' data-testid='1112'> 
       <div className="w-full h-[70%] relative rounded-t-lg">
         <Image
           src={imgSrc}

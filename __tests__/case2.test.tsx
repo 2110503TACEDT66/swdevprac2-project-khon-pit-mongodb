@@ -52,8 +52,8 @@ describe('Sign up Icon', () => {
     const page = await Page()
     render(page)
     await waitFor(()=>{
-      const signupbutton = screen.queryByTestId(1150)
-      expect(signupbutton).toBeNull()
+      const signupbutton = screen.queryAllByTestId('Sign up')
+      expect(signupbutton).toHaveLength(0)
     })
   })
 })

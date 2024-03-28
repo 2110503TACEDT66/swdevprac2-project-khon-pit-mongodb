@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import getDentists from '@/libs/getDentists'
 import DentistCatalog from '@/components/DentistCatalog'
-import { screen, render, waitFor } from '@testing-library/react'
+import { screen, render, waitFor, getByTestId } from '@testing-library/react'
 import Card from '@/components/Card'
 
 describe('Dentist test',()=>{
@@ -13,12 +13,13 @@ describe('Dentist test',()=>{
         let date = ""
         const catalog = DentistCatalog({dentistsJson,date})
         render(catalog)
-        expect(Card).not.toHaveBeenCalled()
+        expect(screen.queryByTestId('1112')).toBeNull()
     })  
     it('Dentist appear on have date',()=>{
         let date = new Date().toISOString()
         const catalog = DentistCatalog({dentistsJson,date})
         render(catalog)
-        expect(Card).toHaveBeenCalled()
+        const card = screen.getAllByTestId('1112')
+        expect(card[0]).toBeInTheDocument()
     })  
 })
